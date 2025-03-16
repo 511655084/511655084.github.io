@@ -4,164 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>星辰iyun</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            min-height: 100vh;
-            background: #f8f9fa;
-            font-family: 'Microsoft YaHei', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        /* 个人信息区域 */
-        .profile-container {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin-bottom: 1rem;
-            transition: transform 0.3s;
-        }
-
-        .avatar:hover {
-            transform: rotate(5deg);
-        }
-
-        .username {
-            font-size: 1.8rem;
-            color: #333;
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-        }
-
-        /* 弹窗样式 */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 100;
-        }
-
-        .modal-content {
-            position: relative;
-            background: white;
-            width: 300px;
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 15% auto;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        /* 新增文字间距 */
-        .modal-content p {
-            margin-bottom: 2.5em;  /* 控制两行空行的间距 */
-            line-height: 1.6;
-        }
-
-        .close-btn {
-            position: absolute;
-            right: 15px;
-            bottom: 15px;
-            cursor: pointer;
-            color: #666;
-            font-size: 14px;
-            padding: 4px 12px;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        .close-btn:hover {
-            background: #f0f0f0;
-        }
-
-        /* 模块样式 */
-        .module-container {
-            margin-top: 1rem;
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .module {
-            display: block;
-            background: white;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s;
-        }
-
-        .module:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .poem {
-            text-align: center;
-            margin-top: 2rem;
-            color: #666;
-            font-size: 1.1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 弹窗 -->
     <div class="modal" id="myModal">
         <div class="modal-content">
             <p>你好，我是星辰iyun。</p>
-            <span class="close-btn" onclick="closeModal()">关闭</span>
+            <span class="close-btn" onclick="closeModal()">&times;</span>
         </div>
     </div>
 
     <!-- 个人信息 -->
     <div class="profile-container">
-        <img src="avatar.jpg" alt="头像" class="avatar">
+        <img src="avatar.jpg" alt="头像" class="avatar" loading="lazy">
         <h1 class="username">星辰iyun</h1>
     </div>
 
     <!-- 功能模块 -->
     <div class="module-container">
-        <a href="https://www.deepseek.com" target="_blank" class="module">
+        <a href="https://www.deepseek.com" target="_blank" rel="noopener" class="module">
             DeepSeek
         </a>
         
-        <a href="https://www.doubao.com" target="_blank" class="module">
+        <a href="https://www.doubao.com" target="_blank" rel="noopener" class="module">
             豆包AI
         </a>
 
         <p class="poem">欲买桂花同载酒 终不似 少年游</p>
     </div>
 
-    <script>
-        // 页面加载完成后显示弹窗
-        window.onload = function() {
-            document.getElementById('myModal').style.display = 'block';
-        };
-
-        // 关闭弹窗函数
-        function closeModal() {
-            document.getElementById('myModal').style.display = 'none';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
