@@ -22,6 +22,9 @@ document.getElementById('anime-pic').addEventListener('click', async function() 
 
         // 调用API
         const response = await fetch('https://tk.illlt.com:759/api.php?type=手机二次元');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
 
         // 创建图片元素
@@ -37,6 +40,12 @@ document.getElementById('anime-pic').addEventListener('click', async function() 
             // 图片加载完成后的处理
             img.onload = () => {
                 container.style.background = 'none';
+            };
+
+            // 图片加载失败处理
+            img.onerror = () => {
+                container.style.background = '#f0f0f0';
+                container.innerHTML = '<div class="error">图片加载失败</div>';
             };
 
             // 点击查看大图
@@ -61,7 +70,13 @@ document.getElementById('anime-pic').addEventListener('click', async function() 
         });
 
     } catch (error) {
-        alert('图片加载失败，请稍后重试');
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'error-message';
+        errorMessage.textContent = '图片加载失败，请稍后重试';
+        document.body.insertBefore(errorMessage, document.querySelector('.poem'));
+        setTimeout(() => {
+            errorMessage.remove();
+        }, 3000);
         console.error('API请求错误:', error);
     } finally {
         loading.style.display = 'none';
