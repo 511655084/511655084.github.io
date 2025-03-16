@@ -3,12 +3,7 @@ window.onload = function() {
     document.getElementById('myModal').style.display = 'block';
 };
 
-// 关闭弹窗函数
+// 关闭弹窗函数（仅通过按钮触发）
 function closeModal() {
     document.getElementById('myModal').style.display = 'none';
 }
-
-// 点击蒙层关闭弹窗
-document.getElementById('myModal').addEventListener('click', function(e) {
-    if (e.target === this) closeModal();
-});
