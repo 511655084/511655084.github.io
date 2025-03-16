@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: white; /* 可根据需要修改页面背景颜色 */
 }
 
 .profile {
@@ -33,7 +34,7 @@ body {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: white; /* 设置底部背景颜色与页面一致 */
 }
 
 /* 媒体查询，适配手机端 */
