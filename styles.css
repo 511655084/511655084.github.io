@@ -5,10 +5,8 @@ body {
 }
 
 .profile {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .profile img {
@@ -16,49 +14,6 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    transition: left 0.3s ease;
-    z-index: 1;
-}
-
-.sidebar-toggle {
-    position: absolute;
-    top: 20px;
-    right: -40px;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 60px;
-}
-
-.sidebar nav ul li {
-    padding: 15px;
-}
-
-.sidebar nav ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-.sidebar.active {
-    left: 0;
 }
 
 .module {
@@ -79,4 +34,17 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #f8f9fa;
+}
+
+/* 媒体查询，适配手机端 */
+@media (max-width: 768px) {
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .module a {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
 }    
