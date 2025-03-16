@@ -54,15 +54,12 @@ body {
 }
 
 .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     background: white;
     width: 300px;
-    max-width: 90%;
     padding: 2rem;
     border-radius: 8px;
+    margin: 15% auto; /* 原版居中方式 */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
@@ -73,17 +70,18 @@ body {
 
 .close-btn {
     position: absolute;
-    top: 15px;
     right: 15px;
+    bottom: 15px; /* 关闭按钮在右下角 */
     cursor: pointer;
     color: #666;
-    font-size: 24px;
-    padding: 0 8px;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
     transition: all 0.3s;
 }
 
 .close-btn:hover {
-    color: #333;
+    background: #f0f0f0;
 }
 
 /* 模块样式 */
