@@ -1,81 +1,43 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>星辰iyun</title>
     <link rel="stylesheet" href="styles.css">
+    <title>个人网站</title>
 </head>
+
 <body>
-    <!-- 侧边栏 -->
+    <!-- 右上角头像和名字 -->
+    <div class="header-right">
+        <img src="https://dummyimage.com/100x100/000/fff" alt="头像">
+        <p>星辰iyun</p>
+    </div>
+
+    <!-- 左上角侧边栏 -->
     <div class="sidebar">
         <button class="sidebar-toggle">☰</button>
-        <nav>
-            <ul>
-                <li><a href="#">首页</a></li>
-                <li><a href="#">关于</a></li>
-                <li><a href="#">联系</a></li>
-            </ul>
-        </nav>
+        <ul class="sidebar-menu">
+            <li><a href="#">首页</a></li>
+            <!-- 可以添加更多首页模块 -->
+        </ul>
     </div>
 
-    <!-- 头像和名字 -->
-    <div class="profile">
-        <img src="avatar.jpg" alt="头像" class="avatar">
-        <h1 class="username">星辰iyun</h1>
-    </div>
-
-    <!-- 广告条幅 -->
-    <div class="banner">
-        <img src="banner.jpg" alt="美图展示">
-    </div>
+    <!-- 广告条幅图片 -->
+    <img src="https://dummyimage.com/1200x300/000/fff" alt="广告条幅" class="banner">
 
     <!-- 功能模块 -->
-    <div class="modules">
-        <div class="module">
-            <a href="https://www.deepseek.com" target="_blank">Deep Seek</a>
-        </div>
+    <div class="module">
+        <a href="https://www.deepseek.com/" target="_blank">deep seek</a>
     </div>
 
-    <!-- 页脚文字 -->
+    <!-- 网页底部文字 -->
     <footer>
         <p>烟波江上使人愁</p>
     </footer>
-    <!-- 弹窗 -->
-    <div class="modal" id="myModal">
-        <div class="modal-content">
-            <p>你好，我是星辰iyun。</p>
-            <span class="close-btn" onclick="closeModal()">关闭</span>
-        </div>
-    </div>
-
-    <!-- 个人信息 -->
-    <div class="profile-container">
-        <img src="avatar.jpg" alt="头像" class="avatar" loading="lazy">
-        <h1 class="username">星辰iyun</h1>
-    </div>
-
-    <!-- 功能模块 -->
-    <div class="module-container">
-        <a href="https://www.deepseek.com" target="_blank" rel="noopener" class="module">
-            DeepSeek
-        </a>
-        
-        <a href="https://www.doubao.com" target="_blank" rel="noopener" class="module">
-            豆包AI
-        </a>
-
-        <a href="javascript:void(0)" class="module" id="anime-pic">
-            次元美图
-            <div class="loading" style="display:none;">加载中...</div>
-        </a>
-
-        <p class="poem">欲买桂花同载酒 终不似 少年游</p>
-    </div>
-
-    <!-- 新增全屏查看容器 -->
-    <div id="fullscreen-container"></div>
 
     <script src="script.js"></script>
 </body>
-</html>
+
+</html>    
