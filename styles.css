@@ -17,6 +17,13 @@ body {
     object-fit: cover;
 }
 
+.art-name {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    color: #007BFF;
+    margin-top: 10px;
+}
+
 .module {
     text-align: center;
     margin: 30px 0;
@@ -29,6 +36,9 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 150px;
 }
 
 footer {
@@ -42,6 +52,10 @@ footer {
     .profile img {
         width: 120px;
         height: 120px;
+    }
+
+    .art-name {
+        font-size: 24px;
     }
 
     .module a {
