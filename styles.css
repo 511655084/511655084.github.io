@@ -61,7 +61,7 @@ body {
 
 /* 模块样式 */
 .module {
-    flex: 1 1 100%; /* 在手机端让模块占满一行 */
+    flex: 1 1 calc(50% - 20px);
     text-align: center;
     box-sizing: border-box;
     transition: all 0.3s ease;
@@ -95,4 +95,21 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: white;
+}
+
+/* 媒体查询，针对小屏幕设备（如手机）优化布局 */
+@media (max-width: 768px) {
+    .module {
+        flex: 1 1 100%; /* 小屏幕下模块占满一行 */
+    }
+    .module-container {
+        width: 95%; /* 小屏幕下功能模块容器更宽 */
+    }
+    .art-name {
+        font-size: 28px; /* 小屏幕下名字字体变小 */
+    }
+    .profile img {
+        width: 120px;
+        height: 120px; /* 小屏幕下头像变小 */
+    }
 }
