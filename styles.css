@@ -24,9 +24,24 @@ body {
     margin-top: 10px;
 }
 
-.module {
-    text-align: center;
+.module-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* 模块之间的间距 */
     margin: 30px 0;
+}
+
+.module {
+    flex: 1 1 calc(33.33% - 20px); /* 每个模块占据大约三分之一的宽度，减去间距，可根据需求调整每行显示数量 */
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* 添加过渡效果，用于动画 */
+    cursor: pointer; /* 鼠标指针变为手型，提示可点击 */
+}
+
+.module:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大模块 */
 }
 
 .module a {
@@ -37,8 +52,13 @@ body {
     border-radius: 5px;
     font-size: 18px;
     display: inline-block;
+    width: 100%; /* 链接填充整个模块宽度 */
     box-sizing: border-box;
-    min-width: 150px;
+    transition: all 0.3s ease; /* 链接也添加过渡效果 */
+}
+
+.module a:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大链接 */
 }
 
 footer {
@@ -49,17 +69,21 @@ footer {
 
 /* 媒体查询，适配手机端 */
 @media (max-width: 768px) {
-    .profile img {
+   .profile img {
         width: 120px;
         height: 120px;
     }
 
-    .art-name {
+   .art-name {
         font-size: 24px;
     }
 
-    .module a {
+   .module {
+        flex: 1 1 100%; /* 在手机端，每个模块占据整行宽度 */
+    }
+
+   .module a {
         padding: 12px 25px;
         font-size: 16px;
     }
-}    
+}
