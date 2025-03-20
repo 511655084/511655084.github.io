@@ -96,4 +96,16 @@ footer {
         width: 80px;
         height: 80px; /* 小屏幕下头像进一步变小 */
     }
+}
+
+/* 媒体查询，针对电脑端调节图片大小 */
+@media (min-width: 769px) {
+    .profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .banner img {
+        max-width: 70%;
+    }
 }    
