@@ -4,11 +4,23 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    line-height: 1.5; /* 全局行高设置 */
+}
+
+/* 头部样式 */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff; /* 头部背景色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 头部阴影 */
 }
 
 /* 头像和名字样式 */
 .profile {
-    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
 #profile-image {
@@ -16,31 +28,33 @@ body {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
+    margin-right: 1rem;
 }
 
 .art-name {
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #333;
-    margin: 0;
 }
 
 /* 置顶文案样式 */
 .top-text {
-    font-size: 16px;
-    color: #333;
-    margin: 0 20px;
+    font-size: 1rem;
+    color: #666;
     text-align: center;
+    margin: 0 1rem;
+    max-width: 200px; /* 限制文案宽度 */
 }
 
 /* 广告条幅图片样式 */
 .banner {
-    max-width: 300px; /* 缩小广告条幅宽度 */
+    max-width: 300px;
 }
 
 .banner img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 功能模块容器样式 */
@@ -48,24 +62,25 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 1.25rem;
+    padding: 1.25rem;
 }
 
 .category-title {
     width: 100%;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 0.75rem;
 }
 
 .module {
     background-color: #fff;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
 .module:hover {
@@ -75,7 +90,7 @@ body {
 .module a {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* 响应式设计 */
@@ -85,12 +100,13 @@ body {
         align-items: center;
     }
    .top-text {
-        margin: 10px 0;
-    }
-    .banner {
+        margin: 1rem 0;
         max-width: 100%;
     }
-    .module-container {
+   .banner {
+        max-width: 100%;
+    }
+   .module-container {
         flex-direction: column;
         align-items: center;
     }
